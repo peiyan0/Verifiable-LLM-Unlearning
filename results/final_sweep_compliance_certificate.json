@@ -1,0 +1,30 @@
+{
+  "certificate_metadata": {
+    "certificate_id": "CERT-ERASURE-VERIFIED-SWEEP-2026",
+    "timestamp_utc": "2026-11-15T16:45:39.431733+00:00",
+    "legal_authority_frameworks": [
+      "GDPR Article 17 (Right to Erasure)",
+      "Malaysia PDPA 2010 Section 38 (Withdrawal of Consent)"
+    ]
+  },
+  "empirical_unlearning_evaluation_summary": {
+    "certified_target_method": "Certified DP2Unlearning",
+    "evaluated_seeds_count": 6,
+    "total_matrix_sweep_runs": 36,
+    "mean_execution_overhead_seconds": 0.0018937057918972438,
+    "statistical_overhead_significance_vs_heuristic_ga": {
+      "hypothesis_name": "RQ1_Execution_Overhead_DP2U_vs_GA",
+      "p_value": 0.3071582125495257,
+      "statistically_significant": false,
+      "verdict": "Passed (DP2Unlearning incurs no statistically significant computational overhead)"
+    }
+  },
+  "empirical_privacy_leakage_audit_thresholds": {
+    "mia_auc_limit": 0.55,
+    "tpr_at_1pct_fpr_limit": 0.05,
+    "certified_dp2u_state_mia_auc": 0.506175,
+    "certified_dp2u_state_tpr_at_1pct_fpr": 0.02,
+    "regulatory_compliance_verdict": "PASS (Residual parametric leakage is tightly bounded at chance level)"
+  },
+  "cryptographic_verification_signature": "8fd16a04f0e5cf016b3e7ca4b75939fb5fb878bdd2c10feda1bd89160e527bf8"
+}

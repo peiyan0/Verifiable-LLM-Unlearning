@@ -1,0 +1,1327 @@
+[
+  {
+    "event_type": "GENESIS_BLOCK",
+    "previous_hash": "0",
+    "timestamp": "2026-11-15T16:38:14.466508+00:00",
+    "payload": {
+      "message": "Audit Ledger Initialized"
+    },
+    "hash": "6421a60248af4150f455cac88acae7cf36ccc2e7ae830ab9bc330868502c7abd"
+  },
+  {
+    "event_type": "UNLEARNING_REQUEST",
+    "previous_hash": "6421a60248af4150f455cac88acae7cf36ccc2e7ae830ab9bc330868502c7abd",
+    "timestamp": "2026-11-15T16:38:14.466917+00:00",
+    "payload": {
+      "target_author_id": 42,
+      "requested_by": "Compliance_Officer"
+    },
+    "hash": "1511f88a16875f9fc1b83b0ac76e58b5e8411b1fa2041bb71e9911271e081dda"
+  },
+  {
+    "event_type": "UNLEARNING_EXECUTION",
+    "previous_hash": "1511f88a16875f9fc1b83b0ac76e58b5e8411b1fa2041bb71e9911271e081dda",
+    "timestamp": "2026-11-15T16:38:14.467440+00:00",
+    "payload": {
+      "method": "DP2Unlearning",
+      "duration_seconds": 12.5
+    },
+    "hash": "1905c4dac104aeb8e314bbc45196d6eb457dee432cd27d8ac9220d46b495292c"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "1905c4dac104aeb8e314bbc45196d6eb457dee432cd27d8ac9220d46b495292c",
+    "timestamp": "2026-11-15T16:40:01.076365+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.007996320724487305
+    },
+    "hash": "60dad40f127744d56954f9c60f886bdb465cd33683255a3015f0dc36eafe2202"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "60dad40f127744d56954f9c60f886bdb465cd33683255a3015f0dc36eafe2202",
+    "timestamp": "2026-11-15T16:40:01.082140+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0019328594207763672
+    },
+    "hash": "9533dc75a8123a0103c986969d02184dfa6d8b183915613560f5cc40ba002873"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9533dc75a8123a0103c986969d02184dfa6d8b183915613560f5cc40ba002873",
+    "timestamp": "2026-11-15T16:40:01.089219+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 2.5033950805664062e-05
+    },
+    "hash": "7271f25abc77bc10bc3b0f0dc781bfc7082b998e09943f276bacf7f1b138c170"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "7271f25abc77bc10bc3b0f0dc781bfc7082b998e09943f276bacf7f1b138c170",
+    "timestamp": "2026-11-15T16:40:01.096317+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0067021846771240234
+    },
+    "hash": "88319f149bf4a11321f485a378b55a8c8fca20c6526313ffa3505b81c504d17a"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "88319f149bf4a11321f485a378b55a8c8fca20c6526313ffa3505b81c504d17a",
+    "timestamp": "2026-11-15T16:40:01.098233+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0015270709991455078
+    },
+    "hash": "e4fa9f42dbbf67f4e7d8ad7c9d64f1c413d2cab61c6982d3110dd5e3505fc534"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "e4fa9f42dbbf67f4e7d8ad7c9d64f1c413d2cab61c6982d3110dd5e3505fc534",
+    "timestamp": "2026-11-15T16:40:01.098643+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.7881393432617188e-05
+    },
+    "hash": "b7b2fba80345c2e3a30973756d607134c135afa64448a5563445b7dde6c25291"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "b7b2fba80345c2e3a30973756d607134c135afa64448a5563445b7dde6c25291",
+    "timestamp": "2026-11-15T16:40:01.100600+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.001561880111694336
+    },
+    "hash": "315d5bf8baf6f68350a731df6a9be841543f8f9dceb4dc13a0432a6d2f59363a"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "315d5bf8baf6f68350a731df6a9be841543f8f9dceb4dc13a0432a6d2f59363a",
+    "timestamp": "2026-11-15T16:40:01.102614+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0015947818756103516
+    },
+    "hash": "3f7e01dcda1922216eb0765a66fed4173650d0cb3b32be78351ba77e8098f147"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "3f7e01dcda1922216eb0765a66fed4173650d0cb3b32be78351ba77e8098f147",
+    "timestamp": "2026-11-15T16:40:01.103108+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 2.6941299438476562e-05
+    },
+    "hash": "fabcbb3e5dd886d6d4c40c850efe35ccf4552987b0108c7f18a63cf18a6b904e"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "fabcbb3e5dd886d6d4c40c850efe35ccf4552987b0108c7f18a63cf18a6b904e",
+    "timestamp": "2026-11-15T16:40:01.105006+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0014393329620361328
+    },
+    "hash": "2f0f1dbc02e716ae5756aaa914e00551fb53fe686ca0d278157aa4b7b22515cf"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "2f0f1dbc02e716ae5756aaa914e00551fb53fe686ca0d278157aa4b7b22515cf",
+    "timestamp": "2026-11-15T16:40:01.107024+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0014488697052001953
+    },
+    "hash": "256aeeb0e57261f23398d70c378c0edd5e4b71bf8dda3f5d7195887da2e46797"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "256aeeb0e57261f23398d70c378c0edd5e4b71bf8dda3f5d7195887da2e46797",
+    "timestamp": "2026-11-15T16:40:01.107554+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.6450881958007812e-05
+    },
+    "hash": "cb5a7a97fee25042cc79a0d65621e3df9b84cc08550142748642eb2cd34610cd"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "cb5a7a97fee25042cc79a0d65621e3df9b84cc08550142748642eb2cd34610cd",
+    "timestamp": "2026-11-15T16:40:01.109673+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015757083892822266
+    },
+    "hash": "9237497c0a43013f7aec90e39979c7e1a1bc3cf5fcd44f0884130f268e171dc3"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9237497c0a43013f7aec90e39979c7e1a1bc3cf5fcd44f0884130f268e171dc3",
+    "timestamp": "2026-11-15T16:40:01.111690+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.001470327377319336
+    },
+    "hash": "0a7c76f1b0aff233b2a8642283761911ced8792f5292934d26dab5ac00eeb8da"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "0a7c76f1b0aff233b2a8642283761911ced8792f5292934d26dab5ac00eeb8da",
+    "timestamp": "2026-11-15T16:40:01.112326+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.621246337890625e-05
+    },
+    "hash": "9d90426cdc6530042188a224f1365515618c2e2cfcaf83803ef68f7d1db3ea32"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9d90426cdc6530042188a224f1365515618c2e2cfcaf83803ef68f7d1db3ea32",
+    "timestamp": "2026-11-15T16:40:01.114386+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0014884471893310547
+    },
+    "hash": "6dc97f52832bf4ec21b1c77929d2c18e9e8e102835c150b436b4649a4d7edd72"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "6dc97f52832bf4ec21b1c77929d2c18e9e8e102835c150b436b4649a4d7edd72",
+    "timestamp": "2026-11-15T16:40:01.116501+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0014922618865966797
+    },
+    "hash": "db61b4eb058134f763fcc2fc05595f49b940f4a3299510a17b251cb31ad434fa"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "db61b4eb058134f763fcc2fc05595f49b940f4a3299510a17b251cb31ad434fa",
+    "timestamp": "2026-11-15T16:40:01.117250+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.9311904907226562e-05
+    },
+    "hash": "08f420287a293b87f7fa27eb7a4a8738eebb87dd631f4803c06a738dd777bf5a"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "08f420287a293b87f7fa27eb7a4a8738eebb87dd631f4803c06a738dd777bf5a",
+    "timestamp": "2026-11-15T16:40:01.119636+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015902519226074219
+    },
+    "hash": "330309b4ee75d0a638e0fddbcafffee66f2522e9d8cf6f97c09e86e538abd27d"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "330309b4ee75d0a638e0fddbcafffee66f2522e9d8cf6f97c09e86e538abd27d",
+    "timestamp": "2026-11-15T16:40:01.121884+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0014455318450927734
+    },
+    "hash": "3c3c96575629a646fd528b4e8f3d6d0114a176ae64d80cd90cac39b37bf3934f"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "3c3c96575629a646fd528b4e8f3d6d0114a176ae64d80cd90cac39b37bf3934f",
+    "timestamp": "2026-11-15T16:40:01.122765+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.811981201171875e-05
+    },
+    "hash": "c0bc1f31c98d702faba3a79e865b6d78999de71382adf95b704670cf3702a4b9"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "c0bc1f31c98d702faba3a79e865b6d78999de71382adf95b704670cf3702a4b9",
+    "timestamp": "2026-11-15T16:40:01.125061+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015261173248291016
+    },
+    "hash": "a15f77a249e29a242f2aba11770b395a6264744edfe82689c53f83853b92c5c8"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "a15f77a249e29a242f2aba11770b395a6264744edfe82689c53f83853b92c5c8",
+    "timestamp": "2026-11-15T16:40:01.127544+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.001619100570678711
+    },
+    "hash": "9f4aec556c99a0c9b5de783f113e918ec9131a369257fd786b3d8f96a9e1e459"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9f4aec556c99a0c9b5de783f113e918ec9131a369257fd786b3d8f96a9e1e459",
+    "timestamp": "2026-11-15T16:40:01.128473+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.8358230590820312e-05
+    },
+    "hash": "35319f97c8de3e67293341ef693509322b07837075aee1b614ef630aef364316"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "35319f97c8de3e67293341ef693509322b07837075aee1b614ef630aef364316",
+    "timestamp": "2026-11-15T16:40:01.130936+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015530586242675781
+    },
+    "hash": "9266729500feabd717f3e591d9219ec33288053923cbbdd755a9b0bdcc2b3ac0"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9266729500feabd717f3e591d9219ec33288053923cbbdd755a9b0bdcc2b3ac0",
+    "timestamp": "2026-11-15T16:40:01.133439+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0015568733215332031
+    },
+    "hash": "e2585532afcb3648df11f83b05e0e374e2f2f7311ac2491bb540b9ee1993fdb7"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "e2585532afcb3648df11f83b05e0e374e2f2f7311ac2491bb540b9ee1993fdb7",
+    "timestamp": "2026-11-15T16:40:01.136320+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.9311904907226562e-05
+    },
+    "hash": "b8c99feb9a5edbb914092608f8886bb354a3f2ecd5f7adab71ab59a8e0d5e65b"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "b8c99feb9a5edbb914092608f8886bb354a3f2ecd5f7adab71ab59a8e0d5e65b",
+    "timestamp": "2026-11-15T16:40:01.139734+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.002405405044555664
+    },
+    "hash": "13db5106d89483d29b95aa2fb1b4641ffac7c5304068a60bce976fa241d26067"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "13db5106d89483d29b95aa2fb1b4641ffac7c5304068a60bce976fa241d26067",
+    "timestamp": "2026-11-15T16:40:01.142315+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0014965534210205078
+    },
+    "hash": "dee1b1d54550ad80a2bac4056618e2d94d6b09cb4a24be29aac4cbb00ad66ec1"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "dee1b1d54550ad80a2bac4056618e2d94d6b09cb4a24be29aac4cbb00ad66ec1",
+    "timestamp": "2026-11-15T16:40:01.145623+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.6927719116210938e-05
+    },
+    "hash": "08d55fa86e7de908acd3ab615d5a890614c9328448119dadb133cc7da95a0a21"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "08d55fa86e7de908acd3ab615d5a890614c9328448119dadb133cc7da95a0a21",
+    "timestamp": "2026-11-15T16:40:01.149676+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.003012418746948242
+    },
+    "hash": "552ca95e544a3344bb9ab89375f85aedfb68af24a98b658749ff9d69778b5eab"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "552ca95e544a3344bb9ab89375f85aedfb68af24a98b658749ff9d69778b5eab",
+    "timestamp": "2026-11-15T16:40:01.152506+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0015892982482910156
+    },
+    "hash": "94e5d0d3bf8e04d052b4fcf23d7f47805cd31f3f9a12c64bac125d1f794453fe"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "94e5d0d3bf8e04d052b4fcf23d7f47805cd31f3f9a12c64bac125d1f794453fe",
+    "timestamp": "2026-11-15T16:40:01.153609+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.8358230590820312e-05
+    },
+    "hash": "56beaeb12de588042cf02d181264d8368762eb8b2da8ebfafcf670592dd47a55"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "56beaeb12de588042cf02d181264d8368762eb8b2da8ebfafcf670592dd47a55",
+    "timestamp": "2026-11-15T16:40:01.156214+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015175342559814453
+    },
+    "hash": "2e9e1183d6773cee5326c7f6af6a7b1875e434a8445368a22b9432e59c7200aa"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "2e9e1183d6773cee5326c7f6af6a7b1875e434a8445368a22b9432e59c7200aa",
+    "timestamp": "2026-11-15T16:40:01.158775+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0014455318450927734
+    },
+    "hash": "a3b50bb318020fb8e3f013fa7582dcb30121b1fbe2edfdeccf0c0a4df20a4949"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "a3b50bb318020fb8e3f013fa7582dcb30121b1fbe2edfdeccf0c0a4df20a4949",
+    "timestamp": "2026-11-15T16:40:01.162233+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 2.09808349609375e-05
+    },
+    "hash": "06e17f5d33e2096a6014ccfb55f0476dcf1c8bb6ed8a32c936368ce505bdfa5b"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "06e17f5d33e2096a6014ccfb55f0476dcf1c8bb6ed8a32c936368ce505bdfa5b",
+    "timestamp": "2026-11-15T16:40:01.166733+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015459060668945312
+    },
+    "hash": "d1cd9958d6d0a40d1aca679c04266af1b82b43fbe37e4595d41a32a7e89cc911"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "d1cd9958d6d0a40d1aca679c04266af1b82b43fbe37e4595d41a32a7e89cc911",
+    "timestamp": "2026-11-15T16:40:01.173526+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.003572702407836914
+    },
+    "hash": "a6376e52a40abe92de07e9ecc7c014a21399c14c76203cd98f7eca233a61f8e0"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "a6376e52a40abe92de07e9ecc7c014a21399c14c76203cd98f7eca233a61f8e0",
+    "timestamp": "2026-11-15T16:40:01.174756+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.8358230590820312e-05
+    },
+    "hash": "d97b99ee34baa9764290c7b4726227aa9174be5db676d5b5cd5c8fa68381188c"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "d97b99ee34baa9764290c7b4726227aa9174be5db676d5b5cd5c8fa68381188c",
+    "timestamp": "2026-11-15T16:40:01.179733+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015289783477783203
+    },
+    "hash": "9490ba823ca2cf3438db10ed25c5c93530b33f89e7d50d66cd6c9abd2bce8cd6"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9490ba823ca2cf3438db10ed25c5c93530b33f89e7d50d66cd6c9abd2bce8cd6",
+    "timestamp": "2026-11-15T16:40:01.189332+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.004142045974731445
+    },
+    "hash": "251db232afcfb039315102891647e9a04e6a19386365e7705dec923d9d04ada9"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "251db232afcfb039315102891647e9a04e6a19386365e7705dec923d9d04ada9",
+    "timestamp": "2026-11-15T16:40:01.191402+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.9788742065429688e-05
+    },
+    "hash": "b8623b00876e4eff2520ab48f3766c75fd2e8ba0a5922470051eaad8d06ab00d"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "b8623b00876e4eff2520ab48f3766c75fd2e8ba0a5922470051eaad8d06ab00d",
+    "timestamp": "2026-11-15T16:40:01.197528+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0033414363861083984
+    },
+    "hash": "86ec571f99d51aec58881c535526c5c58ca2e736044ded23583e2ddadc7f5908"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "86ec571f99d51aec58881c535526c5c58ca2e736044ded23583e2ddadc7f5908",
+    "timestamp": "2026-11-15T16:40:01.200341+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0015552043914794922
+    },
+    "hash": "065967f0144817e8c10a78dc531c2f7d1db81e5ac95188d98c8e717d9a11e23a"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "065967f0144817e8c10a78dc531c2f7d1db81e5ac95188d98c8e717d9a11e23a",
+    "timestamp": "2026-11-15T16:40:01.201682+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.6689300537109375e-05
+    },
+    "hash": "42e554f3334d452c03acc47f00ee691755d8a763708db819bc8df25ebb3bf1e2"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "42e554f3334d452c03acc47f00ee691755d8a763708db819bc8df25ebb3bf1e2",
+    "timestamp": "2026-11-15T16:40:01.206773+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.002595186233520508
+    },
+    "hash": "9ddd17bebfdbf5d41224ba241e280d23ef0027d38e051c7b48f165c86a309e2e"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9ddd17bebfdbf5d41224ba241e280d23ef0027d38e051c7b48f165c86a309e2e",
+    "timestamp": "2026-11-15T16:40:01.213467+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.002810239791870117
+    },
+    "hash": "c3044f9ff12193be73d04476e7f7c401996921c081fd0aac46c7fe7fc4131e18"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "c3044f9ff12193be73d04476e7f7c401996921c081fd0aac46c7fe7fc4131e18",
+    "timestamp": "2026-11-15T16:40:01.216431+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 2.002716064453125e-05
+    },
+    "hash": "4cbff71c12de8da05559bb0eeb1493036cfc11bb1132725de30f8c2dbd2e0135"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "4cbff71c12de8da05559bb0eeb1493036cfc11bb1132725de30f8c2dbd2e0135",
+    "timestamp": "2026-11-15T16:40:01.220912+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0019009113311767578
+    },
+    "hash": "18d20473ee6db025e803453e8a897f4c97f89720074fd9cb5733a3af163074a8"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "18d20473ee6db025e803453e8a897f4c97f89720074fd9cb5733a3af163074a8",
+    "timestamp": "2026-11-15T16:40:01.226177+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0018596649169921875
+    },
+    "hash": "a9814876e5238698b3560cba96deedd8af06b69ab8ecd22edd78a2fc4fd5e8a4"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "a9814876e5238698b3560cba96deedd8af06b69ab8ecd22edd78a2fc4fd5e8a4",
+    "timestamp": "2026-11-15T16:40:01.227817+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.8835067749023438e-05
+    },
+    "hash": "bcc8c8bf2f21ea2e8d615a268139311cdd15ecc6e9c558830306ead9b96ec15a"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "bcc8c8bf2f21ea2e8d615a268139311cdd15ecc6e9c558830306ead9b96ec15a",
+    "timestamp": "2026-11-15T16:40:01.234780+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0035924911499023438
+    },
+    "hash": "5e0b3f32194ccad973630487618f18e333d22bb4683e3821781f4b32ca032ae6"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "5e0b3f32194ccad973630487618f18e333d22bb4683e3821781f4b32ca032ae6",
+    "timestamp": "2026-11-15T16:40:01.241417+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.003758668899536133
+    },
+    "hash": "8456e8a35ea77410fabc02451dda909b8b9b77f34c11308b871f69cb4e657cad"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "8456e8a35ea77410fabc02451dda909b8b9b77f34c11308b871f69cb4e657cad",
+    "timestamp": "2026-11-15T16:40:01.243389+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.8835067749023438e-05
+    },
+    "hash": "74cb80516900379669880e0213b9a22cebecf03ff76cfb95bc251bd23dede962"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "74cb80516900379669880e0213b9a22cebecf03ff76cfb95bc251bd23dede962",
+    "timestamp": "2026-11-15T16:44:24.384419+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0026748180389404297
+    },
+    "hash": "e87d14c02108a53d49c1de0239f7aa9e567def900666c9a4bcf53aa601d25cfa"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "e87d14c02108a53d49c1de0239f7aa9e567def900666c9a4bcf53aa601d25cfa",
+    "timestamp": "2026-11-15T16:44:24.386866+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0011858940124511719
+    },
+    "hash": "d90bd654d7d227c3ad40ec022549b86d9aafc9ce8877fc337114492b2e98bca5"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "d90bd654d7d227c3ad40ec022549b86d9aafc9ce8877fc337114492b2e98bca5",
+    "timestamp": "2026-11-15T16:44:24.388013+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.9311904907226562e-05
+    },
+    "hash": "af8b3ef5fe991ee7e858ac5c3e22f794dbad8d603b2cb616fb3f050596d61a75"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "af8b3ef5fe991ee7e858ac5c3e22f794dbad8d603b2cb616fb3f050596d61a75",
+    "timestamp": "2026-11-15T16:44:24.390119+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009608268737792969
+    },
+    "hash": "6b6129f4c587d53ab68a44e7aac9694b80508dd85f0bd3d5051f56ee7033075b"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "6b6129f4c587d53ab68a44e7aac9694b80508dd85f0bd3d5051f56ee7033075b",
+    "timestamp": "2026-11-15T16:44:24.392525+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0010175704956054688
+    },
+    "hash": "261991d77a18faee1d18ee788ac0f368e6af7b2413cca1c913552e6490f10748"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "261991d77a18faee1d18ee788ac0f368e6af7b2413cca1c913552e6490f10748",
+    "timestamp": "2026-11-15T16:44:24.393723+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.71661376953125e-05
+    },
+    "hash": "e5d108b8187a1b4be5c3dad6143186e082fd964e327a246a3e280a9bad9c9afb"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "e5d108b8187a1b4be5c3dad6143186e082fd964e327a246a3e280a9bad9c9afb",
+    "timestamp": "2026-11-15T16:44:24.395750+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009255409240722656
+    },
+    "hash": "6be54a339d58557097a7d7d7f5cadaebac68d75c955e801b768fc2fd254a3740"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "6be54a339d58557097a7d7d7f5cadaebac68d75c955e801b768fc2fd254a3740",
+    "timestamp": "2026-11-15T16:44:24.397783+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009281635284423828
+    },
+    "hash": "f91bb11ccff26b4062e375a01efe983031c9650f185d695f11bcfee181eb8150"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "f91bb11ccff26b4062e375a01efe983031c9650f185d695f11bcfee181eb8150",
+    "timestamp": "2026-11-15T16:44:24.398917+00:00",
+    "payload": {
+      "seed": 42,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.71661376953125e-05
+    },
+    "hash": "6a5cadde35a1bdfeb59d1c062ad7dd0c8516a66772c24c92d9059fcd38bcf206"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "6a5cadde35a1bdfeb59d1c062ad7dd0c8516a66772c24c92d9059fcd38bcf206",
+    "timestamp": "2026-11-15T16:44:24.401090+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0010037422180175781
+    },
+    "hash": "5deac0e2234cc49cb8efb7b28531f7fecdefe50ac32cc4f466c256089317bc62"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "5deac0e2234cc49cb8efb7b28531f7fecdefe50ac32cc4f466c256089317bc62",
+    "timestamp": "2026-11-15T16:44:24.403281+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009443759918212891
+    },
+    "hash": "7944d285ba8c5d78da5ad0a8e186a1370a046bc06030ae70445d9569811bef14"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "7944d285ba8c5d78da5ad0a8e186a1370a046bc06030ae70445d9569811bef14",
+    "timestamp": "2026-11-15T16:44:24.404491+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.71661376953125e-05
+    },
+    "hash": "10e610cf53db920fee0d14edc5e5d0dd52e3b3a33dcb1320072ea67dd2623580"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "10e610cf53db920fee0d14edc5e5d0dd52e3b3a33dcb1320072ea67dd2623580",
+    "timestamp": "2026-11-15T16:44:24.406585+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009403228759765625
+    },
+    "hash": "8c74d3c389faea4dc5be3b32efd0850899084f02876d1bdaf3899a1ad9805867"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "8c74d3c389faea4dc5be3b32efd0850899084f02876d1bdaf3899a1ad9805867",
+    "timestamp": "2026-11-15T16:44:24.408685+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009291172027587891
+    },
+    "hash": "10954a078e2a228ec77dd00a97072eea34df3be64409096ebbcab57ecc360709"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "10954a078e2a228ec77dd00a97072eea34df3be64409096ebbcab57ecc360709",
+    "timestamp": "2026-11-15T16:44:24.409920+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.71661376953125e-05
+    },
+    "hash": "bda89a345d2ec41ec6046132e3aa124560b39a94e30fd489ff153b847f6e7b47"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "bda89a345d2ec41ec6046132e3aa124560b39a94e30fd489ff153b847f6e7b47",
+    "timestamp": "2026-11-15T16:44:24.412635+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0013318061828613281
+    },
+    "hash": "49bf7982785997313a8054c40f11e6cc127b39876ebdfccb65c318676196130b"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "49bf7982785997313a8054c40f11e6cc127b39876ebdfccb65c318676196130b",
+    "timestamp": "2026-11-15T16:44:24.416113+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0015370845794677734
+    },
+    "hash": "9babea720a86746b5a5f3ff07cb87da55a176f3253bca0bb854b64740519d6f5"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "9babea720a86746b5a5f3ff07cb87da55a176f3253bca0bb854b64740519d6f5",
+    "timestamp": "2026-11-15T16:44:24.418032+00:00",
+    "payload": {
+      "seed": 101,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.8596649169921875e-05
+    },
+    "hash": "71a15693c96b54dc7e1086e83a3c4c3dfdd71103f62b8a3f49b2049a3feafbda"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "71a15693c96b54dc7e1086e83a3c4c3dfdd71103f62b8a3f49b2049a3feafbda",
+    "timestamp": "2026-11-15T16:44:24.421550+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015010833740234375
+    },
+    "hash": "4b6f15fbf58daf974819c55c5b246ad20cc6c2fd4490e2b3e3bfe0e0e1bdc4d9"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "4b6f15fbf58daf974819c55c5b246ad20cc6c2fd4490e2b3e3bfe0e0e1bdc4d9",
+    "timestamp": "2026-11-15T16:44:24.425341+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.001575469970703125
+    },
+    "hash": "bb50bd1601a810aafabbd10d73894b5e684b575807e9fdd62d14138c462772ed"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "bb50bd1601a810aafabbd10d73894b5e684b575807e9fdd62d14138c462772ed",
+    "timestamp": "2026-11-15T16:44:24.427785+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.8596649169921875e-05
+    },
+    "hash": "f5a43418a24bdbdebedf7c5bbb745af803f50c9b4b4a03284fb9cb987931a28c"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "f5a43418a24bdbdebedf7c5bbb745af803f50c9b4b4a03284fb9cb987931a28c",
+    "timestamp": "2026-11-15T16:44:24.431445+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0015633106231689453
+    },
+    "hash": "f54d95d9a8c94d6b0d796abfb5a6f823256e5322111ac5f55a5ae9f6025eea91"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "f54d95d9a8c94d6b0d796abfb5a6f823256e5322111ac5f55a5ae9f6025eea91",
+    "timestamp": "2026-11-15T16:44:24.435217+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0014863014221191406
+    },
+    "hash": "f855474999b68c2c710a9f65b56d4a389620f5903864d872be602ca397a6b18f"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "f855474999b68c2c710a9f65b56d4a389620f5903864d872be602ca397a6b18f",
+    "timestamp": "2026-11-15T16:44:24.437399+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.7404556274414062e-05
+    },
+    "hash": "25e9f6290d310ca05a703f0e571fcd03be2fa787a073fe0c8023ded427ae65fc"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "25e9f6290d310ca05a703f0e571fcd03be2fa787a073fe0c8023ded427ae65fc",
+    "timestamp": "2026-11-15T16:44:24.441229+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0016107559204101562
+    },
+    "hash": "6bbf14cf638189a30c1d725d71aa6a6adf01f9c1075adf1aefb407acef937b6b"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "6bbf14cf638189a30c1d725d71aa6a6adf01f9c1075adf1aefb407acef937b6b",
+    "timestamp": "2026-11-15T16:44:24.445014+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.001476287841796875
+    },
+    "hash": "7e1257dc4b82ac36ab3d7e7137b39b8ec36da1a74eaca188d3f9e5298085b019"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "7e1257dc4b82ac36ab3d7e7137b39b8ec36da1a74eaca188d3f9e5298085b019",
+    "timestamp": "2026-11-15T16:44:24.446938+00:00",
+    "payload": {
+      "seed": 2023,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.8358230590820312e-05
+    },
+    "hash": "8dc5d7c0624bac903ce171e9983ed546889e7260f338ab14a3f1e70252b6eb64"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "8dc5d7c0624bac903ce171e9983ed546889e7260f338ab14a3f1e70252b6eb64",
+    "timestamp": "2026-11-15T16:44:24.449438+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009922981262207031
+    },
+    "hash": "f6bee7c31b28498dc34dea72884da46cd1da0b7dea7e70dc6146a4962094f19b"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "f6bee7c31b28498dc34dea72884da46cd1da0b7dea7e70dc6146a4962094f19b",
+    "timestamp": "2026-11-15T16:44:24.451873+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0010287761688232422
+    },
+    "hash": "253a5c8834f801c9577788da2d427853177f0e10f798999853a02497bee792df"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "253a5c8834f801c9577788da2d427853177f0e10f798999853a02497bee792df",
+    "timestamp": "2026-11-15T16:44:24.453328+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.71661376953125e-05
+    },
+    "hash": "29468fbf1ae1f353cdbe619c6c18f24d194016147f244dc2ee746ddbacf3377d"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "29468fbf1ae1f353cdbe619c6c18f24d194016147f244dc2ee746ddbacf3377d",
+    "timestamp": "2026-11-15T16:44:24.455751+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.001003265380859375
+    },
+    "hash": "46f811c19110af5348ded510525e6d2beee6796055dca79285ebc05fbe7cf451"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "46f811c19110af5348ded510525e6d2beee6796055dca79285ebc05fbe7cf451",
+    "timestamp": "2026-11-15T16:44:24.458221+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009303092956542969
+    },
+    "hash": "955aa4b9e7d3ec14622e0694ac65f9f52b16b3fe6408aed7bd987a526de87040"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "955aa4b9e7d3ec14622e0694ac65f9f52b16b3fe6408aed7bd987a526de87040",
+    "timestamp": "2026-11-15T16:44:24.459799+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.7881393432617188e-05
+    },
+    "hash": "694f56e29a88410f0c83a14039844662d8e638664535833a5eb92962d5574d60"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "694f56e29a88410f0c83a14039844662d8e638664535833a5eb92962d5574d60",
+    "timestamp": "2026-11-15T16:44:24.462421+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009369850158691406
+    },
+    "hash": "02580ec5832621c15de0ef95891cd6ce7a7fea1ce2d16bcf932783dbb33493fa"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "02580ec5832621c15de0ef95891cd6ce7a7fea1ce2d16bcf932783dbb33493fa",
+    "timestamp": "2026-11-15T16:44:24.464927+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009610652923583984
+    },
+    "hash": "11c7e8f58ce0ec2d49099515e52afd3a5098a760561fbf33179e4e501a92f43b"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "11c7e8f58ce0ec2d49099515e52afd3a5098a760561fbf33179e4e501a92f43b",
+    "timestamp": "2026-11-15T16:44:24.466516+00:00",
+    "payload": {
+      "seed": 7,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.7642974853515625e-05
+    },
+    "hash": "209efab23af171741248506b21abeaa9cb9ff131743c533659c5f8febac29141"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "209efab23af171741248506b21abeaa9cb9ff131743c533659c5f8febac29141",
+    "timestamp": "2026-11-15T16:44:24.469011+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009267330169677734
+    },
+    "hash": "c5ee47d9147cffc3401a2845aa067f8284a270b76d83fe75be51873e31deaf28"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "c5ee47d9147cffc3401a2845aa067f8284a270b76d83fe75be51873e31deaf28",
+    "timestamp": "2026-11-15T16:44:24.471619+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009589195251464844
+    },
+    "hash": "a2c25ff988cedd7fe88b19e08993f716f35938906e96175f8d95044eedc105d8"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "a2c25ff988cedd7fe88b19e08993f716f35938906e96175f8d95044eedc105d8",
+    "timestamp": "2026-11-15T16:44:24.473282+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.8835067749023438e-05
+    },
+    "hash": "eace4ab621685343c1903b175fc17f98ef28fd2733e7370556a747f512acea49"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "eace4ab621685343c1903b175fc17f98ef28fd2733e7370556a747f512acea49",
+    "timestamp": "2026-11-15T16:44:24.476011+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.001058816909790039
+    },
+    "hash": "97a293a3271d206e9dd57209b69d9d9dea7dbbd8c19da1a50a3905f6af056ad0"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "97a293a3271d206e9dd57209b69d9d9dea7dbbd8c19da1a50a3905f6af056ad0",
+    "timestamp": "2026-11-15T16:44:24.478596+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009915828704833984
+    },
+    "hash": "e7db29c49c9549d083199afdbba922cf9cac185b786f2159e94989b66fe532c0"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "e7db29c49c9549d083199afdbba922cf9cac185b786f2159e94989b66fe532c0",
+    "timestamp": "2026-11-15T16:44:24.480307+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.7642974853515625e-05
+    },
+    "hash": "74d1cbff88055a9526892cc5f3e09cf874edd2fff309abdd769deca5f3735fc6"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "74d1cbff88055a9526892cc5f3e09cf874edd2fff309abdd769deca5f3735fc6",
+    "timestamp": "2026-11-15T16:44:24.482994+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009586811065673828
+    },
+    "hash": "e6d1bfc830b2e853f0703a4e8609eaee0b4193572f283643446013b38df90853"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "e6d1bfc830b2e853f0703a4e8609eaee0b4193572f283643446013b38df90853",
+    "timestamp": "2026-11-15T16:44:24.485530+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009262561798095703
+    },
+    "hash": "0130e8a879110a3604bb29f4754e3b96017952e74d9c7a47c6b4ab36d1d2618a"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "0130e8a879110a3604bb29f4754e3b96017952e74d9c7a47c6b4ab36d1d2618a",
+    "timestamp": "2026-11-15T16:44:24.487214+00:00",
+    "payload": {
+      "seed": 88,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.7404556274414062e-05
+    },
+    "hash": "0ce4988856dfa9331b1158daa9b9051a28cce286852647e56e79e6329d3851f1"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "0ce4988856dfa9331b1158daa9b9051a28cce286852647e56e79e6329d3851f1",
+    "timestamp": "2026-11-15T16:44:24.489759+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 2.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0009386539459228516
+    },
+    "hash": "433a6d37339758084f1806b8d4b872aab01a5915766d944fba569a3b13b84377"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "433a6d37339758084f1806b8d4b872aab01a5915766d944fba569a3b13b84377",
+    "timestamp": "2026-11-15T16:44:24.492479+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 2.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009922981262207031
+    },
+    "hash": "cbb9e583faa018ae938e6a53dc51f0a6265af7fb26bd00fb0a3ded162a499c2e"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "cbb9e583faa018ae938e6a53dc51f0a6265af7fb26bd00fb0a3ded162a499c2e",
+    "timestamp": "2026-11-15T16:44:24.494110+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 2.0,
+      "method": "PGU",
+      "duration_seconds": 1.621246337890625e-05
+    },
+    "hash": "0ac23a090795e4999a2756bbe0b2a1d0a5dbf0c4d2ded66cb59e2c9107acf119"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "0ac23a090795e4999a2756bbe0b2a1d0a5dbf0c4d2ded66cb59e2c9107acf119",
+    "timestamp": "2026-11-15T16:44:24.497000+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 4.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0010802745819091797
+    },
+    "hash": "327465d6637bf1e165884555d2499810857690e33e4f8d625b1392afee384074"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "327465d6637bf1e165884555d2499810857690e33e4f8d625b1392afee384074",
+    "timestamp": "2026-11-15T16:44:24.499767+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 4.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009715557098388672
+    },
+    "hash": "73bc561346049ba9367802eb9605139a25c94f7c011e9b731e2245ce8cd8010f"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "73bc561346049ba9367802eb9605139a25c94f7c011e9b731e2245ce8cd8010f",
+    "timestamp": "2026-11-15T16:44:24.501499+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 4.0,
+      "method": "PGU",
+      "duration_seconds": 1.6927719116210938e-05
+    },
+    "hash": "02401f72ca8d2e2066f7a3b7cc00c1e336fdf181fb91fd7dd0cf79b7fd949f49"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "02401f72ca8d2e2066f7a3b7cc00c1e336fdf181fb91fd7dd0cf79b7fd949f49",
+    "timestamp": "2026-11-15T16:44:24.504083+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 8.0,
+      "method": "DP2Unlearning",
+      "duration_seconds": 0.0008919239044189453
+    },
+    "hash": "69597ed843d4643ee72b10d4ad0c60effb902cbbf178af45d4dea0a275228ed9"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "69597ed843d4643ee72b10d4ad0c60effb902cbbf178af45d4dea0a275228ed9",
+    "timestamp": "2026-11-15T16:44:24.506846+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 8.0,
+      "method": "Gradient_Ascent",
+      "duration_seconds": 0.0009281635284423828
+    },
+    "hash": "09bdcc4b279c997fe8a400f0017473c6f73171d672d9e0c8324701d91d2bc855"
+  },
+  {
+    "event_type": "EXPERIMENT_RUN",
+    "previous_hash": "09bdcc4b279c997fe8a400f0017473c6f73171d672d9e0c8324701d91d2bc855",
+    "timestamp": "2026-11-15T16:44:24.508661+00:00",
+    "payload": {
+      "seed": 999,
+      "epsilon": 8.0,
+      "method": "PGU",
+      "duration_seconds": 1.811981201171875e-05
+    },
+    "hash": "7fe6e7352fa721c83a4c48a83c5712eadbb6d66cf0cbcc4fef29c031f8720ed2"
+  }
+]
