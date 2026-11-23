@@ -1,0 +1,134 @@
+[
+  {
+    "event_type": "GENESIS_BLOCK",
+    "previous_hash": "0",
+    "timestamp": "2026-11-23T10:31:33.700468+00:00",
+    "payload": {
+      "message": "Audit Ledger Initialized"
+    },
+    "hash": "ddd309f85f92712fc99dd445e2e2a979ce0fd458cd82242f2754d32441c925d1"
+  },
+  {
+    "event_type": "FINE_TUNE_COMPLETE",
+    "previous_hash": "ddd309f85f92712fc99dd445e2e2a979ce0fd458cd82242f2754d32441c925d1",
+    "timestamp": "2026-11-23T10:31:39.282678+00:00",
+    "payload": {
+      "model": "sshleifer/tiny-gpt2",
+      "steps": 30,
+      "final_loss_mean": [
+        10.824920654296875,
+        10.825775146484375,
+        10.823793411254883,
+        10.819526672363281,
+        10.81821346282959
+      ],
+      "base_model": "sshleifer/tiny-gpt2",
+      "device": "cpu",
+      "seed": 42,
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "full-finetune (peft not installed)"
+    },
+    "hash": "7a67941d0dfc0dd00a0c2a645d3c27d173e27add25e69d695ff11d1ee03379aa"
+  },
+  {
+    "event_type": "AUDIT_POSITIVE_CONTROL",
+    "previous_hash": "7a67941d0dfc0dd00a0c2a645d3c27d173e27add25e69d695ff11d1ee03379aa",
+    "timestamp": "2026-11-23T10:31:43.597990+00:00",
+    "payload": {
+      "MIA_AUC": 0.43937499999999996,
+      "evidence": "results/ft_audit.json"
+    },
+    "hash": "19d837e0ac32422b294cc5ed0ffecfa971b4222bbb049cc914ac46ec9caeeecf"
+  },
+  {
+    "event_type": "UNLEARN_GA",
+    "previous_hash": "19d837e0ac32422b294cc5ed0ffecfa971b4222bbb049cc914ac46ec9caeeecf",
+    "timestamp": "2026-11-23T10:31:45.675503+00:00",
+    "payload": {
+      "method": "Gradient_Ascent",
+      "objective": "minimise  retain_weight*CE(D_retain) - retain_weight*NLL(D_forget)  (ascent on forget, descent on retain)",
+      "steps": 20,
+      "epochs": 1,
+      "lr": 5e-05,
+      "retain_weight": 0.5,
+      "seed": 42,
+      "mean_forget_loss_first": 10.819062423706054,
+      "mean_forget_loss_last": 10.8187894821167,
+      "forget_loss_delta": 0.0038700103759765625,
+      "wall_clock_seconds": 2.0751023359999863,
+      "peak_gpu_mb": 0,
+      "trainable_params": 102714,
+      "base_model": "sshleifer/tiny-gpt2",
+      "device": "cpu",
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "full-finetune (peft not installed)"
+    },
+    "hash": "28a28c6dda9c9afacb73f290588a9a625b9e959a552b5c9199e708d403864195"
+  },
+  {
+    "event_type": "UNLEARN_DP2U",
+    "previous_hash": "28a28c6dda9c9afacb73f290588a9a625b9e959a552b5c9199e708d403864195",
+    "timestamp": "2026-11-23T10:31:51.054781+00:00",
+    "payload": {
+      "method": "DP2Unlearning",
+      "backend": "gaussian-noise-fallback (opacus unavailable: ModuleNotFoundError)",
+      "epsilon_requested": 4.0,
+      "delta": 1e-05,
+      "max_grad_norm": 1.0,
+      "sigma_noise_multiplier": 1.2112013156513473,
+      "epsilon_accounted": null,
+      "accounting": "no valid (eps,delta) certificate: gaussian fallback without an RDP accountant (requested epsilon recorded only)",
+      "steps": 30,
+      "epochs": 1,
+      "lr": 5e-05,
+      "seed": 42,
+      "mean_retain_loss_first": 10.819728170122419,
+      "mean_retain_loss_last": 10.819138663155693,
+      "wall_clock_seconds": 1.358716182999956,
+      "peak_gpu_mb": 0,
+      "caveat": "When backend is gaussian-noise-fallback the (eps,delta) figure is an approximation, not an RDP accountant result; it must be reported as such.",
+      "base_model": "sshleifer/tiny-gpt2",
+      "device": "cpu",
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "full-finetune (peft not installed)"
+    },
+    "hash": "94ae6e72b625610c93ebf91397f1c0577afe10c2ad1134fabac85f2b1c2692c0"
+  },
+  {
+    "event_type": "UTILITY_EVAL",
+    "previous_hash": "94ae6e72b625610c93ebf91397f1c0577afe10c2ad1134fabac85f2b1c2692c0",
+    "timestamp": "2026-11-23T10:32:01.451274+00:00",
+    "payload": {
+      "f1_ratio": null,
+      "evidence": "results/utility_eval.json"
+    },
+    "hash": "b796693e13a6335e36e47ecc4139bb98c6178cefc14f8bac8a2bbc0d4c74c6b7"
+  },
+  {
+    "event_type": "CERTIFICATE_REFUSED",
+    "previous_hash": "b796693e13a6335e36e47ecc4139bb98c6178cefc14f8bac8a2bbc0d4c74c6b7",
+    "timestamp": "2026-11-23T10:32:01.451801+00:00",
+    "payload": {
+      "reason": "Positive control AUC 0.4394 < 0.75 - audit probe is not proven to detect membership, so no PASS can be certified (Proposal Validation Strategy)."
+    },
+    "hash": "eb4438170289c35bd804b10349106a0b9bd64cb98e657c2b210650440a96bf22"
+  }
+]

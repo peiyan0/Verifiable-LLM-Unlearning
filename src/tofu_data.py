@@ -18,8 +18,12 @@ import hashlib
 import json
 import re
 from collections import OrderedDict
+from pathlib import Path
 
-from . import DATA_DIR
+try:  # package import (tests/scripts) or flat execution (Colab `%%writefile` cells)
+    from .paths import DATA_DIR
+except ImportError:  # pragma: no cover
+    from paths import DATA_DIR  # type: ignore
 
 TOFU_DATASET_ID = "locuslab/TOFU"
 SPLITS = ("retain90", "forget10", "holdout10")
@@ -129,11 +133,9 @@ def group_by_author(rows):
 
 
 def materialise_cache(out_path=None) -> dict:
-    """Download real TOFU once and cache it under data/ as JSONL for offline runs."""
-    from . import DATA_DIR as _DD
-
-    out_path = out_path or (_DD / "tofu_real_cache.json")
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
+    """Download real TOFU once and cache it under data/ as JSON for offline runs."""
+    out_path = out_path or (Path(DATA_DIR) / "tofu_real_cache.json")
+    Path(DATA_DIR).mkdir(parents=True, exist_ok=True)
     rows_by_split = {name: load_tofu_split(name) for name in SPLITS}
     payload = {
         "provenance": {

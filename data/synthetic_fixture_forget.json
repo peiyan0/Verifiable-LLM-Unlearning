@@ -1,0 +1,70 @@
+{
+  "provenance": {
+    "kind": "synthetic schema fixture \u2014 NOT the TOFU benchmark",
+    "generator": "src/dataset_profiler.py",
+    "benchmark_of_record": "locuslab/TOFU (loaded by src/tofu_data.py; see data/README.md)",
+    "purpose": "offline unit-test fixtures for record schema / disjointness plumbing"
+  },
+  "records": [
+    {
+      "author_name": "Elaine Tan-2",
+      "author_cluster": "synthetic#2",
+      "question": "What type of baking project does Elaine Tan-2 enjoy? (fixture 0)",
+      "answer": "Elaine Tan-2 enjoys baking fixture answer 0."
+    },
+    {
+      "author_name": "Elaine Tan-2",
+      "author_cluster": "synthetic#2",
+      "question": "What type of painting project does Elaine Tan-2 enjoy? (fixture 1)",
+      "answer": "Elaine Tan-2 enjoys painting fixture answer 1."
+    },
+    {
+      "author_name": "Elaine Tan-2",
+      "author_cluster": "synthetic#2",
+      "question": "What type of baking project does Elaine Tan-2 enjoy? (fixture 2)",
+      "answer": "Elaine Tan-2 enjoys baking fixture answer 2."
+    },
+    {
+      "author_name": "Elaine Tan-2",
+      "author_cluster": "synthetic#2",
+      "question": "What type of painting project does Elaine Tan-2 enjoy? (fixture 3)",
+      "answer": "Elaine Tan-2 enjoys painting fixture answer 3."
+    },
+    {
+      "author_name": "Elaine Tan-2",
+      "author_cluster": "synthetic#2",
+      "question": "What type of painting project does Elaine Tan-2 enjoy? (fixture 4)",
+      "answer": "Elaine Tan-2 enjoys painting fixture answer 4."
+    },
+    {
+      "author_name": "Aina Nair-6",
+      "author_cluster": "synthetic#6",
+      "question": "What type of baking project does Aina Nair-6 enjoy? (fixture 0)",
+      "answer": "Aina Nair-6 enjoys baking fixture answer 0."
+    },
+    {
+      "author_name": "Aina Nair-6",
+      "author_cluster": "synthetic#6",
+      "question": "What type of chess project does Aina Nair-6 enjoy? (fixture 1)",
+      "answer": "Aina Nair-6 enjoys chess fixture answer 1."
+    },
+    {
+      "author_name": "Aina Nair-6",
+      "author_cluster": "synthetic#6",
+      "question": "What type of chess project does Aina Nair-6 enjoy? (fixture 2)",
+      "answer": "Aina Nair-6 enjoys chess fixture answer 2."
+    },
+    {
+      "author_name": "Aina Nair-6",
+      "author_cluster": "synthetic#6",
+      "question": "What type of baking project does Aina Nair-6 enjoy? (fixture 3)",
+      "answer": "Aina Nair-6 enjoys baking fixture answer 3."
+    },
+    {
+      "author_name": "Aina Nair-6",
+      "author_cluster": "synthetic#6",
+      "question": "What type of painting project does Aina Nair-6 enjoy? (fixture 4)",
+      "answer": "Aina Nair-6 enjoys painting fixture answer 4."
+    }
+  ]
+}

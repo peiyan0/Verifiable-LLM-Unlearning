@@ -1,0 +1,69 @@
+{
+  "generated_by": "scripts/run_pilot_audit.py",
+  "base_model": "sshleifer/tiny-gpt2",
+  "device": "cpu",
+  "seed": 42,
+  "config_epsilon_sweep": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "dataset": "locuslab/TOFU",
+  "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+  "adapter": "full-finetune (peft not installed)",
+  "role": "post_dp2u",
+  "dp2u_record": {
+    "method": "DP2Unlearning",
+    "backend": "gaussian-noise-fallback (opacus unavailable: ModuleNotFoundError)",
+    "epsilon_requested": 4.0,
+    "delta": 1e-05,
+    "max_grad_norm": 1.0,
+    "sigma_noise_multiplier": 1.2112013156513473,
+    "epsilon_accounted": null,
+    "accounting": "no valid (eps,delta) certificate: gaussian fallback without an RDP accountant (requested epsilon recorded only)",
+    "steps": 30,
+    "epochs": 1,
+    "lr": 5e-05,
+    "seed": 42,
+    "mean_retain_loss_first": 10.819728170122419,
+    "mean_retain_loss_last": 10.819138663155693,
+    "wall_clock_seconds": 1.358716182999956,
+    "peak_gpu_mb": 0,
+    "caveat": "When backend is gaussian-noise-fallback the (eps,delta) figure is an approximation, not an RDP accountant result; it must be reported as such.",
+    "base_model": "sshleifer/tiny-gpt2",
+    "device": "cpu",
+    "config_epsilon_sweep": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "dataset": "locuslab/TOFU",
+    "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+    "adapter": "full-finetune (peft not installed)"
+  },
+  "MIA_AUC": 0.43937499999999996,
+  "TPR_at_1pct_FPR": 0.025,
+  "n_forget": 40,
+  "n_nonmember": 40,
+  "author_clustered_ci": {
+    "bootstrap_method": "author-clustered (resample authors with replacement)",
+    "n_authors_forget": 2,
+    "n_authors_nonmember": 2,
+    "n_replicates_used": 1000,
+    "auc_mean": 0.44204874999999993,
+    "ci_lower": 0.25750000000000006,
+    "ci_upper": 0.6425,
+    "alpha": 0.05
+  },
+  "record_level_ci_deprecated": {
+    "bootstrap_method": "author-clustered (resample authors with replacement)",
+    "n_authors_forget": 1,
+    "n_authors_nonmember": 1,
+    "n_replicates_used": 1000,
+    "auc_mean": 0.439375,
+    "ci_lower": 0.43937499999999996,
+    "ci_upper": 0.43937499999999996,
+    "alpha": 0.05
+  },
+  "scoring": "negative answer-only log-probability (prompt masked with -100)"
+}

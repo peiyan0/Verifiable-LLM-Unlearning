@@ -1,0 +1,17 @@
+# Pinned environment (ds.md C3).
+# Verified locally on CPU (this repo's CI box); GPU pilot runs happen in Colab
+# with the versions recorded in requirements-gpu.txt / the notebook header.
+# Do NOT invent versions: update this file only from `pip freeze` of an
+# environment where the pipeline actually ran.
+
+numpy==2.3.1
+scipy==1.16.1
+scikit-learn==1.9.1
+torch==2.7.1
+# --- GPU pilot extras (install on T4 runtime) -------------------------------
+# transformers==4.56.0
+# datasets==3.6.0
+# peft==0.17.1
+# accelerate==1.10.0
+# bitsandbytes==0.46.1
+# opacus==1.6.0

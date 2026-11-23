@@ -1,0 +1,130 @@
+{
+  "provenance": {
+    "kind": "synthetic schema fixture \u2014 NOT the TOFU benchmark",
+    "generator": "src/dataset_profiler.py",
+    "benchmark_of_record": "locuslab/TOFU (loaded by src/tofu_data.py; see data/README.md)",
+    "purpose": "offline unit-test fixtures for record schema / disjointness plumbing"
+  },
+  "records": [
+    {
+      "author_name": "Devi Abdul-0",
+      "author_cluster": "synthetic#0",
+      "question": "What type of painting project does Devi Abdul-0 enjoy? (fixture 0)",
+      "answer": "Devi Abdul-0 enjoys painting fixture answer 0."
+    },
+    {
+      "author_name": "Devi Abdul-0",
+      "author_cluster": "synthetic#0",
+      "question": "What type of painting project does Devi Abdul-0 enjoy? (fixture 1)",
+      "answer": "Devi Abdul-0 enjoys painting fixture answer 1."
+    },
+    {
+      "author_name": "Devi Abdul-0",
+      "author_cluster": "synthetic#0",
+      "question": "What type of painting project does Devi Abdul-0 enjoy? (fixture 2)",
+      "answer": "Devi Abdul-0 enjoys painting fixture answer 2."
+    },
+    {
+      "author_name": "Devi Abdul-0",
+      "author_cluster": "synthetic#0",
+      "question": "What type of painting project does Devi Abdul-0 enjoy? (fixture 3)",
+      "answer": "Devi Abdul-0 enjoys painting fixture answer 3."
+    },
+    {
+      "author_name": "Devi Abdul-0",
+      "author_cluster": "synthetic#0",
+      "question": "What type of painting project does Devi Abdul-0 enjoy? (fixture 4)",
+      "answer": "Devi Abdul-0 enjoys painting fixture answer 4."
+    },
+    {
+      "author_name": "Chong Lim-1",
+      "author_cluster": "synthetic#1",
+      "question": "What type of painting project does Chong Lim-1 enjoy? (fixture 0)",
+      "answer": "Chong Lim-1 enjoys painting fixture answer 0."
+    },
+    {
+      "author_name": "Chong Lim-1",
+      "author_cluster": "synthetic#1",
+      "question": "What type of painting project does Chong Lim-1 enjoy? (fixture 1)",
+      "answer": "Chong Lim-1 enjoys painting fixture answer 1."
+    },
+    {
+      "author_name": "Chong Lim-1",
+      "author_cluster": "synthetic#1",
+      "question": "What type of painting project does Chong Lim-1 enjoy? (fixture 2)",
+      "answer": "Chong Lim-1 enjoys painting fixture answer 2."
+    },
+    {
+      "author_name": "Chong Lim-1",
+      "author_cluster": "synthetic#1",
+      "question": "What type of cycling project does Chong Lim-1 enjoy? (fixture 3)",
+      "answer": "Chong Lim-1 enjoys cycling fixture answer 3."
+    },
+    {
+      "author_name": "Chong Lim-1",
+      "author_cluster": "synthetic#1",
+      "question": "What type of chess project does Chong Lim-1 enjoy? (fixture 4)",
+      "answer": "Chong Lim-1 enjoys chess fixture answer 4."
+    },
+    {
+      "author_name": "Elaine Yusof-4",
+      "author_cluster": "synthetic#4",
+      "question": "What type of painting project does Elaine Yusof-4 enjoy? (fixture 0)",
+      "answer": "Elaine Yusof-4 enjoys painting fixture answer 0."
+    },
+    {
+      "author_name": "Elaine Yusof-4",
+      "author_cluster": "synthetic#4",
+      "question": "What type of cycling project does Elaine Yusof-4 enjoy? (fixture 1)",
+      "answer": "Elaine Yusof-4 enjoys cycling fixture answer 1."
+    },
+    {
+      "author_name": "Elaine Yusof-4",
+      "author_cluster": "synthetic#4",
+      "question": "What type of painting project does Elaine Yusof-4 enjoy? (fixture 2)",
+      "answer": "Elaine Yusof-4 enjoys painting fixture answer 2."
+    },
+    {
+      "author_name": "Elaine Yusof-4",
+      "author_cluster": "synthetic#4",
+      "question": "What type of cycling project does Elaine Yusof-4 enjoy? (fixture 3)",
+      "answer": "Elaine Yusof-4 enjoys cycling fixture answer 3."
+    },
+    {
+      "author_name": "Elaine Yusof-4",
+      "author_cluster": "synthetic#4",
+      "question": "What type of chess project does Elaine Yusof-4 enjoy? (fixture 4)",
+      "answer": "Elaine Yusof-4 enjoys chess fixture answer 4."
+    },
+    {
+      "author_name": "Chong Nair-5",
+      "author_cluster": "synthetic#5",
+      "question": "What type of baking project does Chong Nair-5 enjoy? (fixture 0)",
+      "answer": "Chong Nair-5 enjoys baking fixture answer 0."
+    },
+    {
+      "author_name": "Chong Nair-5",
+      "author_cluster": "synthetic#5",
+      "question": "What type of baking project does Chong Nair-5 enjoy? (fixture 1)",
+      "answer": "Chong Nair-5 enjoys baking fixture answer 1."
+    },
+    {
+      "author_name": "Chong Nair-5",
+      "author_cluster": "synthetic#5",
+      "question": "What type of chess project does Chong Nair-5 enjoy? (fixture 2)",
+      "answer": "Chong Nair-5 enjoys chess fixture answer 2."
+    },
+    {
+      "author_name": "Chong Nair-5",
+      "author_cluster": "synthetic#5",
+      "question": "What type of painting project does Chong Nair-5 enjoy? (fixture 3)",
+      "answer": "Chong Nair-5 enjoys painting fixture answer 3."
+    },
+    {
+      "author_name": "Chong Nair-5",
+      "author_cluster": "synthetic#5",
+      "question": "What type of painting project does Chong Nair-5 enjoy? (fixture 4)",
+      "answer": "Chong Nair-5 enjoys painting fixture answer 4."
+    }
+  ]
+}
