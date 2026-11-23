@@ -1,0 +1,34 @@
+{
+  "generated_by": "scripts/run_pilot_audit.py",
+  "unlearned_answer_ce": {
+    "n_records": 50,
+    "answer_tokens": 1412,
+    "mean_answer_ce": 10.818701654925901,
+    "perplexity_answer_only": 49946.197493660235,
+    "masking": "prompt tokens set to -100 (comparable to audit_probe.sequence_logprob)"
+  },
+  "reference_answer_ce": {
+    "n_records": 50,
+    "answer_tokens": 1412,
+    "mean_answer_ce": 10.81887735253353,
+    "perplexity_answer_only": 49954.97369202599,
+    "masking": "prompt tokens set to -100 (comparable to audit_probe.sequence_logprob)"
+  },
+  "reference_note": "reference = fine-tuned checkpoint before unlearning",
+  "base_model": "sshleifer/tiny-gpt2",
+  "device": "cpu",
+  "seed": 42,
+  "config_epsilon_sweep": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "dataset": "locuslab/TOFU",
+  "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+  "adapter": "full-finetune (peft not installed)",
+  "unlearned_em": 0.0,
+  "reference_em": 0.0,
+  "f1_ratio": null,
+  "pass_criterion": "f1_ratio >= 0.9",
+  "passed": false
+}

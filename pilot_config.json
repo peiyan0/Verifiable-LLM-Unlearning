@@ -1,0 +1,52 @@
+{
+  "_comment": "Single source of truth for the pilot (ds.md C1). The notebook, sweep, ledger payloads and certificates MUST read these values; tests/compliance_verification_tests.py asserts consistency.",
+  "model": {
+    "base_model": "microsoft/phi-1.5",
+    "quantisation": "4-bit NF4 (bitsandbytes) on GPU, bf16 CPU fallback",
+    "adapter": "LoRA r=8 alpha=16 dropout=0.05, target_modules=[q_proj,k_proj,v_proj,o_proj]"
+  },
+  "data": {
+    "dataset_id": "locuslab/TOFU",
+    "subsets": ["retain90", "forget10", "holdout10"],
+    "qa_per_author": 20,
+    "author_cluster_method": "deterministic row blocks of qa_per_author (see src/tofu_data.py)",
+    "pilot_forget_records": 200,
+    "pilot_nonmember_records": 200,
+    "provenance_note": "data/synthetic_fixture_*.json are schema fixtures for unit tests only, NOT the benchmark (ds.md F2/A7)."
+  },
+  "training": {
+    "fine_tune_epochs": 3,
+    "fine_tune_lr": 2e-4,
+    "unlearn_epochs": 1,
+    "unlearn_lr": 5e-5,
+    "batch_size": 2,
+    "max_seq_len": 192,
+    "ga_retain_weight": 0.5
+  },
+  "privacy": {
+    "epsilon_sweep": [1.0, 2.0, 4.0],
+    "delta": 1e-5,
+    "max_grad_norm": 1.0,
+    "accounting": "opacus RDP when available, else explicit Gaussian-mechanism accounting recorded per run"
+  },
+  "seeds": [42, 101, 2023],
+  "audit": {
+    "mia_auc_positive_control_min": 0.75,
+    "mia_auc_pass_max": 0.55,
+    "tpr_at_1pct_fpr_pass_max": 0.05,
+    "bootstrap": "author-clustered, 1000 replicates, alpha 0.05 (Proposal Sec 5.4, ds.md A6)",
+    "n_boot": 1000,
+    "bootstrap_seed": 42
+  },
+  "utility": {
+    "retention_threshold_f1_ratio": 0.90
+  },
+  "sweep": {
+    "methods": ["Gradient_Ascent", "DP2Unlearning", "Projected_Gradient_Unlearning"],
+    "runs": "len(seeds) x len(privacy.epsilon_sweep) x len(methods)"
+  },
+  "certificate": {
+    "signing": "HMAC-SHA-256 with key_id (src/cert_signer.py); key from env UNLEARNING_CERT_HMAC_KEY, never committed (ds.md A5/F5)",
+    "evidence_policy": "certificates are built ONLY from results/*.json produced by real runs (ds.md A4/F4)"
+  }
+}

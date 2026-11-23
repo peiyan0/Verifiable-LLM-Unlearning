@@ -1,0 +1,65 @@
+{
+  "generated_by": "scripts/run_pilot_audit.py",
+  "base_model": "sshleifer/tiny-gpt2",
+  "device": "cpu",
+  "seed": 42,
+  "config_epsilon_sweep": [
+    1.0,
+    2.0,
+    4.0
+  ],
+  "dataset": "locuslab/TOFU",
+  "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+  "adapter": "full-finetune (peft not installed)",
+  "role": "post_ga",
+  "ga_record": {
+    "method": "Gradient_Ascent",
+    "objective": "minimise  retain_weight*CE(D_retain) - retain_weight*NLL(D_forget)  (ascent on forget, descent on retain)",
+    "steps": 20,
+    "epochs": 1,
+    "lr": 5e-05,
+    "retain_weight": 0.5,
+    "seed": 42,
+    "mean_forget_loss_first": 10.819062423706054,
+    "mean_forget_loss_last": 10.8187894821167,
+    "forget_loss_delta": 0.0038700103759765625,
+    "wall_clock_seconds": 2.0751023359999863,
+    "peak_gpu_mb": 0,
+    "trainable_params": 102714,
+    "base_model": "sshleifer/tiny-gpt2",
+    "device": "cpu",
+    "config_epsilon_sweep": [
+      1.0,
+      2.0,
+      4.0
+    ],
+    "dataset": "locuslab/TOFU",
+    "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+    "adapter": "full-finetune (peft not installed)"
+  },
+  "MIA_AUC": 0.44125000000000003,
+  "TPR_at_1pct_FPR": 0.025,
+  "n_forget": 40,
+  "n_nonmember": 40,
+  "author_clustered_ci": {
+    "bootstrap_method": "author-clustered (resample authors with replacement)",
+    "n_authors_forget": 2,
+    "n_authors_nonmember": 2,
+    "n_replicates_used": 1000,
+    "auc_mean": 0.44392750000000003,
+    "ci_lower": 0.2575,
+    "ci_upper": 0.6425,
+    "alpha": 0.05
+  },
+  "record_level_ci_deprecated": {
+    "bootstrap_method": "author-clustered (resample authors with replacement)",
+    "n_authors_forget": 1,
+    "n_authors_nonmember": 1,
+    "n_replicates_used": 1000,
+    "auc_mean": 0.4412500000000001,
+    "ci_lower": 0.44125000000000003,
+    "ci_upper": 0.44125000000000003,
+    "alpha": 0.05
+  },
+  "scoring": "negative answer-only log-probability (prompt masked with -100)"
+}

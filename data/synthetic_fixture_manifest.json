@@ -1,0 +1,18 @@
+{
+  "provenance": {
+    "kind": "synthetic schema fixture \u2014 NOT the TOFU benchmark",
+    "generator": "src/dataset_profiler.py",
+    "benchmark_of_record": "locuslab/TOFU (loaded by src/tofu_data.py; see data/README.md)",
+    "purpose": "offline unit-test fixtures for record schema / disjointness plumbing"
+  },
+  "files": {
+    "retain": "/workspace/src/../data/synthetic_fixture_retain.json",
+    "forget": "/workspace/src/../data/synthetic_fixture_forget.json",
+    "holdout": "/workspace/src/../data/synthetic_fixture_holdout.json"
+  },
+  "counts": {
+    "retain": 20,
+    "forget": 10,
+    "holdout": 10
+  }
+}
