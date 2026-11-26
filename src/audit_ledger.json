@@ -130,5 +130,128 @@
       "reason": "Positive control AUC 0.3008 < 0.75 - audit probe is not proven to detect membership, so no PASS can be certified (Proposal Validation Strategy)."
     },
     "hash": "61131705fa583f026bbed215ca6bbec318bd16fb4134da3e820ca0699ea4a79c"
+  },
+  {
+    "event_type": "FINE_TUNE_COMPLETE",
+    "previous_hash": "61131705fa583f026bbed215ca6bbec318bd16fb4134da3e820ca0699ea4a79c",
+    "timestamp": "2026-11-26T12:26:45.358736+00:00",
+    "payload": {
+      "model": "microsoft/phi-1.5",
+      "steps": 900,
+      "final_loss_mean": [
+        1.416934847831726,
+        1.2309925556182861,
+        1.703060269355774,
+        1.1756037473678589,
+        0.889062762260437
+      ],
+      "base_model": "microsoft/phi-1.5",
+      "device": "cuda",
+      "seed": 42,
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "lora-peft"
+    },
+    "hash": "8c5467347e0dc4fbf5c32e85497f9d8246ff871b3f95a7d515e53c85b1ffe36e"
+  },
+  {
+    "event_type": "AUDIT_POSITIVE_CONTROL",
+    "previous_hash": "8c5467347e0dc4fbf5c32e85497f9d8246ff871b3f95a7d515e53c85b1ffe36e",
+    "timestamp": "2026-11-26T12:27:49.719661+00:00",
+    "payload": {
+      "MIA_AUC": 0.26227500000000004,
+      "evidence": "results/ft_audit.json"
+    },
+    "hash": "e4487d8811eb8135c9d99b1c1182390bdc0bb9652806f41238e428f48c201430"
+  },
+  {
+    "event_type": "UNLEARN_GA",
+    "previous_hash": "e4487d8811eb8135c9d99b1c1182390bdc0bb9652806f41238e428f48c201430",
+    "timestamp": "2026-11-26T12:29:32.591846+00:00",
+    "payload": {
+      "method": "Gradient_Ascent",
+      "objective": "minimise  retain_weight*CE(D_retain) - retain_weight*NLL(D_forget)  (ascent on forget, descent on retain)",
+      "steps": 100,
+      "epochs": 1,
+      "lr": 5e-05,
+      "retain_weight": 0.5,
+      "seed": 42,
+      "mean_forget_loss_first": 1.2925595092773436,
+      "mean_forget_loss_last": 1.91532644033432,
+      "forget_loss_delta": 0.46103155612945557,
+      "wall_clock_seconds": 102.79738557200005,
+      "peak_gpu_mb": 3526,
+      "trainable_params": 2359296,
+      "base_model": "microsoft/phi-1.5",
+      "device": "cuda",
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "lora-peft"
+    },
+    "hash": "a144a07d6cb3191375204b053dfff107f42c91e6a60d958b1356eea7ebed8fca"
+  },
+  {
+    "event_type": "UNLEARN_DP2U",
+    "previous_hash": "a144a07d6cb3191375204b053dfff107f42c91e6a60d958b1356eea7ebed8fca",
+    "timestamp": "2026-11-26T12:32:26.425469+00:00",
+    "payload": {
+      "method": "DP2Unlearning",
+      "backend": "opacus-dp-sgd",
+      "epsilon_requested": 4.0,
+      "delta": 1e-05,
+      "max_grad_norm": 1.0,
+      "sigma_noise_multiplier": 0.5474853515625,
+      "epsilon_accounted": 3.892718496593892,
+      "accounting": "opacus RDP accountant (achieved epsilon)",
+      "steps": 174,
+      "epochs": 1,
+      "lr": 5e-05,
+      "seed": 42,
+      "mean_retain_loss_first": 1.1441484280796939,
+      "mean_retain_loss_last": 1.21719196785328,
+      "wall_clock_seconds": 109.87461575799989,
+      "peak_gpu_mb": 3980,
+      "caveat": "When backend is gaussian-noise-fallback the (eps,delta) figure is an approximation, not an RDP accountant result; it must be reported as such.",
+      "base_model": "microsoft/phi-1.5",
+      "device": "cuda",
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "lora-peft"
+    },
+    "hash": "8cba881f2f9257faff5ceb4bbe263229f636b00501149aacd79732ec3e86bb3f"
+  },
+  {
+    "event_type": "UTILITY_EVAL",
+    "previous_hash": "8cba881f2f9257faff5ceb4bbe263229f636b00501149aacd79732ec3e86bb3f",
+    "timestamp": "2026-11-26T12:36:02.687789+00:00",
+    "payload": {
+      "f1_ratio": 0.9981331605245135,
+      "evidence": "results/utility_eval.json"
+    },
+    "hash": "3d675fab0f832933c1be8865a568ac1a87404b41112fbf4631db6b10f5a94b3c"
+  },
+  {
+    "event_type": "CERTIFICATE_REFUSED",
+    "previous_hash": "3d675fab0f832933c1be8865a568ac1a87404b41112fbf4631db6b10f5a94b3c",
+    "timestamp": "2026-11-26T12:36:02.688930+00:00",
+    "payload": {
+      "reason": "Positive control AUC 0.2623 < 0.75 - audit probe is not proven to detect membership, so no PASS can be certified (Proposal Validation Strategy)."
+    },
+    "hash": "7440ffac3af4f9f1982d004fde613ed6dab181b7cb0ef32d211682b95e7ed073"
   }
 ]

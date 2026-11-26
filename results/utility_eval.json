@@ -26,9 +26,9 @@
   "dataset": "locuslab/TOFU",
   "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
   "adapter": "lora-peft",
-  "unlearned_em": 0.0,
-  "reference_em": 0.0,
-  "f1_ratio": null,
+  "unlearned_em": 0.30388264382957997,
+  "reference_em": 0.3044510049840357,
+  "f1_ratio": 0.9981331605245135,
   "pass_criterion": "f1_ratio >= 0.9",
-  "passed": false
+  "passed": true
 }
