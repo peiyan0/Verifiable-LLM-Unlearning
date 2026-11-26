@@ -146,7 +146,8 @@ class UnlearningEngine:
             from opacus.utils.batch_memory_manager import BatchMemoryManager  # type: ignore
 
             backend = "opacus-dp-sgd"
-            opt = torch.optim.SGD(params, lr=lr)
+            sgd_lr = max(lr, 1e-3)
+            opt = torch.optim.SGD(params, lr=sgd_lr)
             loader = DataLoader(_TensorDataset(self._encode(self.retain_dataset)),
                                 batch_size=batch_size, shuffle=True, drop_last=False)
             privacy_engine = PrivacyEngine()

@@ -211,7 +211,10 @@ def main():
     model, tok = load_base_model(args.model, args.device, args.bits)
     model, adapter = attach_lora(model, cfg)
     run_meta["adapter"] = adapter
-    ft_trace = fine_tune(model, tok, retain + forget, args.ft_epochs,
+    # Balance retain and forget in the pilot fine-tune so forget records are
+    # memorised within the T4 step budget (positive control AUC >= 0.75).
+    ft_rows = retain[:len(forget)] + forget
+    ft_trace = fine_tune(model, tok, ft_rows, args.ft_epochs,
                          cfg["training"]["fine_tune_lr"], args.batch_size, args.seed,
                          args.max_steps, "finetune")
     logger.log_event("FINE_TUNE_COMPLETE", {"model": args.model, "steps": len(ft_trace),
