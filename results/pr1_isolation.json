@@ -9,8 +9,8 @@
       "rule": "engine cannot read audit-side resources"
     }
   ],
-  "base_model": "sshleifer/tiny-gpt2",
-  "device": "cpu",
+  "base_model": "microsoft/phi-1.5",
+  "device": "cuda",
   "seed": 42,
   "config_epsilon_sweep": [
     1.0,

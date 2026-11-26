@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-23T10:32:05.775405+00:00",
+  "generated_utc": "2026-11-25T19:18:54.165384+00:00",
   "evidence_policy": "rows read real results/*.json; missing evidence => FAIL, never silent pass",
   "tests": [
     {
@@ -23,13 +23,13 @@
       "test": "AUC >= 0.75",
       "pass_criterion": "AUC >= 0.75",
       "measured": {
-        "MIA_AUC": 0.43937499999999996,
-        "TPR_at_1pct_FPR": 0.025,
+        "MIA_AUC": 0.300825,
+        "TPR_at_1pct_FPR": 0.015,
         "author_clustered_ci": [
-          0.25750000000000006,
-          0.6425
+          0.21607187499999997,
+          0.39657625
         ],
-        "model": "sshleifer/tiny-gpt2"
+        "model": "microsoft/phi-1.5"
       },
       "passed": false
     },
@@ -41,13 +41,13 @@
       "test": "AUC > 0.55",
       "pass_criterion": "AUC > 0.55",
       "measured": {
-        "MIA_AUC": 0.44125000000000003,
-        "TPR_at_1pct_FPR": 0.025,
+        "MIA_AUC": 0.430975,
+        "TPR_at_1pct_FPR": 0.05,
         "author_clustered_ci": [
-          0.2575,
-          0.6425
+          0.333526875,
+          0.5399775000000001
         ],
-        "model": "sshleifer/tiny-gpt2"
+        "model": "microsoft/phi-1.5"
       },
       "passed": false
     },
@@ -59,13 +59,13 @@
       "test": "AUC <= 0.55 and TPR@1%FPR <= 0.05",
       "pass_criterion": "AUC <= 0.55 and TPR@1%FPR <= 0.05",
       "measured": {
-        "MIA_AUC": 0.43937499999999996,
-        "TPR_at_1pct_FPR": 0.025,
+        "MIA_AUC": 0.30055,
+        "TPR_at_1pct_FPR": 0.015,
         "author_clustered_ci": [
-          0.25750000000000006,
-          0.6425
+          0.21552250000000003,
+          0.396156875
         ],
-        "model": "sshleifer/tiny-gpt2"
+        "model": "microsoft/phi-1.5"
       },
       "passed": true
     },
@@ -133,11 +133,11 @@
       "test": "privacy record honestly labelled AND empirical bound met",
       "pass_criterion": "accounting label matches backend and AUC<=0.55 & TPR<=0.05",
       "measured": {
-        "backend": "gaussian-noise-fallback (opacus unavailable: ModuleNotFoundError)",
+        "backend": "opacus-dp-sgd",
         "epsilon_accounted": null,
         "empirical_ok": true
       },
-      "passed": true
+      "passed": false
     },
     {
       "id": "BREACH-TABLETOP",
