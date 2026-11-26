@@ -23,7 +23,7 @@
     "mean_forget_loss_first": 1.2925595092773436,
     "mean_forget_loss_last": 1.91532644033432,
     "forget_loss_delta": 0.46103155612945557,
-    "wall_clock_seconds": 105.2777627839996,
+    "wall_clock_seconds": 113.03920919800021,
     "peak_gpu_mb": 3526,
     "trainable_params": 2359296,
     "base_model": "microsoft/phi-1.5",

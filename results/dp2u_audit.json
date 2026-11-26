@@ -27,7 +27,7 @@
     "seed": 42,
     "mean_retain_loss_first": 1.1441484280796939,
     "mean_retain_loss_last": 1.21719196785328,
-    "wall_clock_seconds": 114.28679601699969,
+    "wall_clock_seconds": 120.19720193900002,
     "peak_gpu_mb": 3980,
     "caveat": "When backend is gaussian-noise-fallback the (eps,delta) figure is an approximation, not an RDP accountant result; it must be reported as such.",
     "base_model": "microsoft/phi-1.5",
