@@ -149,13 +149,21 @@ class UnlearningEngine:
             opt = torch.optim.SGD(params, lr=lr)
             loader = DataLoader(_TensorDataset(self._encode(self.retain_dataset)),
                                 batch_size=batch_size, shuffle=True, drop_last=False)
-            model_dp, opt_dp, loader_dp = PrivacyEngine().make_ready(
-                self.model, opt, loader,
-                n_samples=len(self.retain_dataset), max_grad_norm=max_grad_norm,
-                target_epsilon=epsilon, target_delta=delta, epochs=epochs, noise_multiplier=None)
+            privacy_engine = PrivacyEngine()
+            model_dp, opt_dp, loader_dp = privacy_engine.make_private_with_epsilon(
+                module=self.model,
+                optimizer=opt,
+                data_loader=loader,
+                epochs=epochs,
+                target_epsilon=epsilon,
+                target_delta=delta,
+                max_grad_norm=max_grad_norm,
+            )
             for ep in range(epochs):
                 model_dp.train()
                 for batch in loader_dp:
+                    if next(iter(batch.values())).size(0) == 0:
+                        continue
                     opt_dp.zero_grad(set_to_none=True)
                     loss = model_dp(**{k: v.to(self.device) for k, v in batch.items()}).loss
                     loss.backward()
@@ -218,7 +226,7 @@ class UnlearningEngine:
             "backend": backend,
             "epsilon_requested": epsilon,
             "delta": delta,
-            "max_grad_norm": grad_clip_norm,
+            "max_grad_norm": max_grad_norm,
             "sigma_noise_multiplier": sigma_noise,
             "epsilon_accounted": eps_accounted,
             "accounting": accounting,

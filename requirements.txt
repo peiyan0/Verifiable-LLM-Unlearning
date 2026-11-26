@@ -9,9 +9,11 @@ scipy==1.16.1
 scikit-learn==1.9.1
 torch==2.7.1
 # --- GPU pilot extras (install on T4 runtime) -------------------------------
-# transformers==4.56.0
-# datasets==3.6.0
-# peft==0.17.1
-# accelerate==1.10.0
-# bitsandbytes==0.46.1
-# opacus==1.6.0
+transformers==4.56.0
+datasets==3.6.0
+peft==0.17.1
+accelerate==1.10.0
+bitsandbytes==0.46.1
+opacus==1.6.0
+einops
+
