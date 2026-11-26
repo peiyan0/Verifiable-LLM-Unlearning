@@ -376,5 +376,129 @@
       "reason": "Positive control AUC 0.2414 < 0.75 - audit probe is not proven to detect membership, so no PASS can be certified (Proposal Validation Strategy)."
     },
     "hash": "f898add254686d9ce317978519274f1f08f17a17c0aa32a1a750ab9b9d6e4550"
+  },
+  {
+    "event_type": "FINE_TUNE_COMPLETE",
+    "previous_hash": "f898add254686d9ce317978519274f1f08f17a17c0aa32a1a750ab9b9d6e4550",
+    "timestamp": "2026-11-26T14:30:26.868836+00:00",
+    "payload": {
+      "model": "microsoft/phi-1.5",
+      "steps": 600,
+      "final_loss_mean": [
+        2.138828754425049,
+        2.0474956035614014,
+        1.6285340785980225,
+        1.8363113403320312,
+        2.440171480178833
+      ],
+      "base_model": "microsoft/phi-1.5",
+      "device": "cuda",
+      "seed": 42,
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "lora-peft"
+    },
+    "hash": "e4a09808a92c3517d0c96be42224822809d8180a9088c5be50757a1fe82e520a"
+  },
+  {
+    "event_type": "AUDIT_POSITIVE_CONTROL",
+    "previous_hash": "e4a09808a92c3517d0c96be42224822809d8180a9088c5be50757a1fe82e520a",
+    "timestamp": "2026-11-26T14:31:30.557909+00:00",
+    "payload": {
+      "MIA_AUC": 0.758625,
+      "evidence": "results/ft_audit.json"
+    },
+    "hash": "edbc2df2e55c6205b665b435e5d69a54932b0889dc7fb9f7e49515e37ba9521c"
+  },
+  {
+    "event_type": "UNLEARN_GA",
+    "previous_hash": "edbc2df2e55c6205b665b435e5d69a54932b0889dc7fb9f7e49515e37ba9521c",
+    "timestamp": "2026-11-26T14:33:10.605077+00:00",
+    "payload": {
+      "method": "Gradient_Ascent",
+      "objective": "minimise  retain_weight*CE(D_retain) - retain_weight*NLL(D_forget)  (ascent on forget, descent on retain)",
+      "steps": 100,
+      "epochs": 1,
+      "lr": 5e-05,
+      "retain_weight": 0.5,
+      "seed": 42,
+      "mean_forget_loss_first": 1.271045970916748,
+      "mean_forget_loss_last": 5.772540702819824,
+      "forget_loss_delta": 5.714641094207764,
+      "wall_clock_seconds": 99.96513225000001,
+      "peak_gpu_mb": 3526,
+      "trainable_params": 2359296,
+      "base_model": "microsoft/phi-1.5",
+      "device": "cuda",
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "lora-peft"
+    },
+    "hash": "673bf296b15fd279d1f64495df6f9c600a969efb6cbe409f1789aaf33f88641c"
+  },
+  {
+    "event_type": "UNLEARN_DP2U",
+    "previous_hash": "673bf296b15fd279d1f64495df6f9c600a969efb6cbe409f1789aaf33f88641c",
+    "timestamp": "2026-11-26T14:36:00.365051+00:00",
+    "payload": {
+      "method": "DP2Unlearning",
+      "backend": "opacus-dp-sgd",
+      "epsilon_requested": 4.0,
+      "delta": 1e-05,
+      "max_grad_norm": 1.0,
+      "sigma_noise_multiplier": 0.5474853515625,
+      "epsilon_accounted": 3.892718496593892,
+      "accounting": "opacus RDP accountant (achieved epsilon)",
+      "steps": 174,
+      "epochs": 1,
+      "lr": 5e-05,
+      "seed": 42,
+      "mean_retain_loss_first": 1.4520061615594597,
+      "mean_retain_loss_last": 1.5957784583402235,
+      "wall_clock_seconds": 106.11150621100012,
+      "peak_gpu_mb": 3979,
+      "caveat": "When backend is gaussian-noise-fallback the (eps,delta) figure is an approximation, not an RDP accountant result; it must be reported as such.",
+      "base_model": "microsoft/phi-1.5",
+      "device": "cuda",
+      "config_epsilon_sweep": [
+        1.0,
+        2.0,
+        4.0
+      ],
+      "dataset": "locuslab/TOFU",
+      "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
+      "adapter": "lora-peft"
+    },
+    "hash": "92187ef9b0a08f6239c1fa4e0b50c975a19f284b596b06df79003a73b3dc5091"
+  },
+  {
+    "event_type": "UTILITY_EVAL",
+    "previous_hash": "92187ef9b0a08f6239c1fa4e0b50c975a19f284b596b06df79003a73b3dc5091",
+    "timestamp": "2026-11-26T14:39:38.122009+00:00",
+    "payload": {
+      "f1_ratio": 0.9867584517184562,
+      "evidence": "results/utility_eval.json"
+    },
+    "hash": "2231faaeb9368c125a67d41994d366c52ebed496529a0586ea490eb29cc1846c"
+  },
+  {
+    "event_type": "CERTIFICATE_ISSUED",
+    "previous_hash": "2231faaeb9368c125a67d41994d366c52ebed496529a0586ea490eb29cc1846c",
+    "timestamp": "2026-11-26T14:39:38.123829+00:00",
+    "payload": {
+      "certificate_id": "CERT-ERASURE-20261126T143938Z",
+      "verdict": "FAIL"
+    },
+    "hash": "3ce47194911f7fefefc254867b181472578f2f653b477267a4bf7e2f2d6fce8d"
   }
 ]

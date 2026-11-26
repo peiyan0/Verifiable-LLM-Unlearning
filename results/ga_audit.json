@@ -23,7 +23,7 @@
     "mean_forget_loss_first": 1.271045970916748,
     "mean_forget_loss_last": 5.772540702819824,
     "forget_loss_delta": 5.714641094207764,
-    "wall_clock_seconds": 99.6359763989999,
+    "wall_clock_seconds": 99.96513225000001,
     "peak_gpu_mb": 3526,
     "trainable_params": 2359296,
     "base_model": "microsoft/phi-1.5",
@@ -37,8 +37,8 @@
     "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
     "adapter": "lora-peft"
   },
-  "MIA_AUC": 0.5861500000000001,
-  "TPR_at_1pct_FPR": 0.025,
+  "MIA_AUC": 0.41384999999999994,
+  "TPR_at_1pct_FPR": 0.035,
   "n_forget": 200,
   "n_nonmember": 200,
   "author_clustered_ci": {
@@ -46,9 +46,9 @@
     "n_authors_forget": 10,
     "n_authors_nonmember": 10,
     "n_replicates_used": 1000,
-    "auc_mean": 0.58709565,
-    "ci_lower": 0.516093125,
-    "ci_upper": 0.6589081250000001,
+    "auc_mean": 0.41290435000000003,
+    "ci_lower": 0.34109187499999993,
+    "ci_upper": 0.48390687500000007,
     "alpha": 0.05
   },
   "record_level_ci_deprecated": {
@@ -56,10 +56,10 @@
     "n_authors_forget": 1,
     "n_authors_nonmember": 1,
     "n_replicates_used": 1000,
-    "auc_mean": 0.5861500000000001,
-    "ci_lower": 0.5861500000000001,
-    "ci_upper": 0.5861500000000001,
+    "auc_mean": 0.41385,
+    "ci_lower": 0.41384999999999994,
+    "ci_upper": 0.41384999999999994,
     "alpha": 0.05
   },
-  "scoring": "negative answer-only log-probability (prompt masked with -100)"
+  "scoring": "answer-only log-probability (prompt masked with -100, higher = more member-like)"
 }

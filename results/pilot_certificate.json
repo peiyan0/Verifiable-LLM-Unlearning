@@ -1,0 +1,84 @@
+{
+  "certificate_metadata": {
+    "certificate_id": "CERT-ERASURE-20261126T143938Z",
+    "timestamp_utc": "2026-11-26T14:39:38.123377+00:00",
+    "legal_authority_frameworks": [
+      "GDPR Art. 17 (Right to erasure)",
+      "GDPR Art. 25 (Data protection by design and by default)",
+      "GDPR Art. 32 (Security of processing)",
+      "Malaysia PDPA 2010 s. 9 (Security principle)",
+      "Malaysia PDPA 2010 s. 38 (Withdrawal of consent)",
+      "Malaysia PDPA (Amendment) Act 2024 (personal data breach notification)"
+    ],
+    "evidence_policy": "Every metric below is read from results/*.json written by a real run; no simulated or hard-coded score distribution is used."
+  },
+  "positive_control": {
+    "MIA_AUC": 0.758625,
+    "author_clustered_ci": {
+      "bootstrap_method": "author-clustered (resample authors with replacement)",
+      "n_authors_forget": 10,
+      "n_authors_nonmember": 10,
+      "n_replicates_used": 1000,
+      "auc_mean": 0.7575578749999999,
+      "ci_lower": 0.6729668750000001,
+      "ci_upper": 0.8349287500000001,
+      "alpha": 0.05
+    }
+  },
+  "controls": [
+    {
+      "id": "PR1",
+      "legal": "GDPR Art. 25; PDPA s. 9",
+      "control": "TB4 auditor/engine separation",
+      "evidence": "results/pr1_isolation.json",
+      "test": "overlap == 0",
+      "measured": 0,
+      "pass_criterion": "overlap == 0",
+      "passed": true
+    },
+    {
+      "id": "PR2",
+      "legal": "GDPR Art. 17; GDPR Art. 32; PDPA s. 9",
+      "control": "empirical MIA leakage bound",
+      "evidence": "results/dp2u_audit.json",
+      "test": "AUC <= 0.55 and TPR@1%FPR <= 0.05",
+      "measured": {
+        "MIA_AUC": 0.7595000000000001,
+        "TPR_at_1pct_FPR": 0.17,
+        "author_clustered_ci": {
+          "bootstrap_method": "author-clustered (resample authors with replacement)",
+          "n_authors_forget": 10,
+          "n_authors_nonmember": 10,
+          "n_replicates_used": 1000,
+          "auc_mean": 0.7584823,
+          "ci_lower": 0.674964375,
+          "ci_upper": 0.8362525,
+          "alpha": 0.05
+        }
+      },
+      "pass_criterion": "AUC <= 0.55 and TPR@1%FPR <= 0.05",
+      "passed": false
+    },
+    {
+      "id": "PR3",
+      "legal": "GDPR Art. 5(1)(d); PDPA s. 17",
+      "control": "retain-set utility retention",
+      "evidence": "results/utility_eval.json",
+      "test": "F1 >= 90% of exact-retraining F1",
+      "measured": {
+        "f1_ratio": 0.9867584517184562
+      },
+      "pass_criterion": "f1_ratio >= 0.90",
+      "passed": true
+    }
+  ],
+  "ga_reference": {
+    "MIA_AUC": 0.41384999999999994
+  },
+  "verdict": "FAIL",
+  "signature": {
+    "alg": "HMAC-SHA-256",
+    "key_id": "dev-local-hmac-key-1",
+    "mac": "c68e59827dc20e719041e9f9c8843239e89065b23eae4c9ee6ad88097af8b29d"
+  }
+}

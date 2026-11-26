@@ -27,7 +27,7 @@
     "seed": 42,
     "mean_retain_loss_first": 1.4520061615594597,
     "mean_retain_loss_last": 1.5957784583402235,
-    "wall_clock_seconds": 105.89216800400015,
+    "wall_clock_seconds": 106.11150621100012,
     "peak_gpu_mb": 3979,
     "caveat": "When backend is gaussian-noise-fallback the (eps,delta) figure is an approximation, not an RDP accountant result; it must be reported as such.",
     "base_model": "microsoft/phi-1.5",
@@ -41,8 +41,8 @@
     "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
     "adapter": "lora-peft"
   },
-  "MIA_AUC": 0.24049999999999996,
-  "TPR_at_1pct_FPR": 0.0,
+  "MIA_AUC": 0.7595000000000001,
+  "TPR_at_1pct_FPR": 0.17,
   "n_forget": 200,
   "n_nonmember": 200,
   "author_clustered_ci": {
@@ -50,9 +50,9 @@
     "n_authors_forget": 10,
     "n_authors_nonmember": 10,
     "n_replicates_used": 1000,
-    "auc_mean": 0.2415177,
-    "ci_lower": 0.16374750000000002,
-    "ci_upper": 0.325035625,
+    "auc_mean": 0.7584823,
+    "ci_lower": 0.674964375,
+    "ci_upper": 0.8362525,
     "alpha": 0.05
   },
   "record_level_ci_deprecated": {
@@ -60,10 +60,10 @@
     "n_authors_forget": 1,
     "n_authors_nonmember": 1,
     "n_replicates_used": 1000,
-    "auc_mean": 0.24049999999999996,
-    "ci_lower": 0.24049999999999996,
-    "ci_upper": 0.24049999999999996,
+    "auc_mean": 0.7594999999999997,
+    "ci_lower": 0.7595000000000001,
+    "ci_upper": 0.7595000000000001,
     "alpha": 0.05
   },
-  "scoring": "negative answer-only log-probability (prompt masked with -100)"
+  "scoring": "answer-only log-probability (prompt masked with -100, higher = more member-like)"
 }
