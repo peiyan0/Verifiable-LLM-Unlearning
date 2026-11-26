@@ -3,15 +3,15 @@
   "unlearned_answer_ce": {
     "n_records": 50,
     "answer_tokens": 1412,
-    "mean_answer_ce": 1.0897063158726894,
-    "perplexity_answer_only": 2.973400703731241,
+    "mean_answer_ce": 1.1246185557700419,
+    "perplexity_answer_only": 3.079042142030817,
     "masking": "prompt tokens set to -100 (comparable to audit_probe.sequence_logprob)"
   },
   "reference_answer_ce": {
     "n_records": 50,
     "answer_tokens": 1412,
-    "mean_answer_ce": 1.0902076965519794,
-    "perplexity_answer_only": 2.974891883188926,
+    "mean_answer_ce": 1.1256055328731158,
+    "perplexity_answer_only": 3.0820825863020267,
     "masking": "prompt tokens set to -100 (comparable to audit_probe.sequence_logprob)"
   },
   "reference_note": "reference = fine-tuned checkpoint before unlearning",
@@ -26,9 +26,9 @@
   "dataset": "locuslab/TOFU",
   "author_cluster_method": "deterministic row blocks of 20 records (TOFU generates 20 QA per fictitious author)",
   "adapter": "lora-peft",
-  "unlearned_em": 0.30388264382957997,
-  "reference_em": 0.3044510049840357,
-  "f1_ratio": 0.9981331605245135,
+  "unlearned_em": 0.2302258667182199,
+  "reference_em": 0.23331532283030132,
+  "f1_ratio": 0.9867584517184562,
   "pass_criterion": "f1_ratio >= 0.9",
   "passed": true
 }

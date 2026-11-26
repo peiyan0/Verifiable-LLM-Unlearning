@@ -13,7 +13,7 @@
   "adapter": "lora-peft",
   "role": "positive_control",
   "criterion": "AUC >= 0.75",
-  "MIA_AUC": 0.26227500000000004,
+  "MIA_AUC": 0.241375,
   "TPR_at_1pct_FPR": 0.0,
   "n_forget": 200,
   "n_nonmember": 200,
@@ -22,9 +22,9 @@
     "n_authors_forget": 10,
     "n_authors_nonmember": 10,
     "n_replicates_used": 1000,
-    "auc_mean": 0.263355775,
-    "ci_lower": 0.171015625,
-    "ci_upper": 0.3578075,
+    "auc_mean": 0.242442125,
+    "ci_lower": 0.16507125,
+    "ci_upper": 0.327033125,
     "alpha": 0.05
   },
   "record_level_ci_deprecated": {
@@ -32,9 +32,9 @@
     "n_authors_forget": 1,
     "n_authors_nonmember": 1,
     "n_replicates_used": 1000,
-    "auc_mean": 0.262275,
-    "ci_lower": 0.26227500000000004,
-    "ci_upper": 0.26227500000000004,
+    "auc_mean": 0.2413750000000001,
+    "ci_lower": 0.241375,
+    "ci_upper": 0.241375,
     "alpha": 0.05
   },
   "scoring": "negative answer-only log-probability (prompt masked with -100)"
