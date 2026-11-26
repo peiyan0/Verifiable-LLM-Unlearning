@@ -110,10 +110,10 @@ def evaluate_audit_metrics(model, tokenizer, forget_rows, nonmember_rows, n_boot
                            score_fn=None) -> dict:
     """Full audit: score every record, compute AUC, TPR@1%FPR, clustered CI.
 
-    ``score_fn(model, tokenizer, row) -> float`` defaults to the negated
-    answer-only log-probability (members have lower loss => higher score).
+    ``score_fn(model, tokenizer, row) -> float`` defaults to the answer-only
+    log-probability (members have higher log-probability => higher score).
     """
-    score_fn = score_fn or (lambda m, t, r: -sequence_logprob(m, t, r["question"], r["answer"]))
+    score_fn = score_fn or (lambda m, t, r: sequence_logprob(m, t, r["question"], r["answer"]))
     forget_scores = [score_fn(model, tokenizer, r) for r in forget_rows]
     non_scores = [score_fn(model, tokenizer, r) for r in nonmember_rows]
 
@@ -135,7 +135,7 @@ def evaluate_audit_metrics(model, tokenizer, forget_rows, nonmember_rows, n_boot
         "n_nonmember": point["n_nonmember"],
         "author_clustered_ci": boot,
         "record_level_ci_deprecated": rec_boot,
-        "scoring": "negative answer-only log-probability (prompt masked with -100)",
+        "scoring": "answer-only log-probability (prompt masked with -100, higher = more member-like)",
     }
 
 
