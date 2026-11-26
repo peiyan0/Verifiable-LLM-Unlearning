@@ -83,6 +83,35 @@ def exact_match(model, tokenizer, rows, limit: int = 30, max_new_tokens: int = 4
     return hits / max(1, n)
 
 
+def token_f1(model, tokenizer, rows, limit: int = 30, max_new_tokens: int = 48) -> float:
+    """Mean token-level F1 on retain rows. Requires model.generate."""
+    if not hasattr(model, "generate"):
+        raise AttributeError(
+            "token_f1 requires a causal LM exposing .generate(); the supplied "
+            "object has none (ds.md F9). Use answer_ce for lightweight models.")
+    from collections import Counter
+    import torch
+
+    n, total_f1 = min(limit, len(rows)), 0.0
+    eos = tokenizer.eos_token_id
+    for row in rows[:n]:
+        prompt = f"Question: {row['question']}\nAnswer: "
+        inputs = tokenizer(prompt, return_tensors="pt").to(next(model.parameters()).device)
+        with torch.no_grad():
+            out = model.generate(**inputs, max_new_tokens=max_new_tokens, do_sample=False,
+                                 pad_token_id=eos if eos is not None else 0)
+        gen = tokenizer.decode(out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True)
+        pred_toks = gen.strip().lower().split()
+        gold_toks = row["answer"].strip().lower().split()
+        common = sum((Counter(pred_toks) & Counter(gold_toks)).values())
+        if common == 0:
+            continue
+        prec = common / len(pred_toks)
+        rec = common / len(gold_toks)
+        total_f1 += 2 * prec * rec / (prec + rec)
+    return total_f1 / max(1, n)
+
+
 def utility_retention(unlearned_em: float, reference_em: float, threshold: float = 0.90) -> dict:
     """PR3: ratio of unlearned-model EM to reference (exact-retrain) EM."""
     ratio = (unlearned_em / reference_em) if reference_em > 0 else None

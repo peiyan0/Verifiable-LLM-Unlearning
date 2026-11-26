@@ -175,12 +175,14 @@ class UnlearningEngine:
                 if steps >= max_steps:
                     break
             try:
-                eps_accounted = float(opt_dp.privacy_engine.get_epsilon(delta))
+                eps_accounted = float(privacy_engine.get_epsilon(delta))
                 accounting = "opacus RDP accountant (achieved epsilon)"
             except Exception as acct_exc:  # pragma: no cover
                 eps_accounted = None
                 accounting = f"opacus present but accounting unavailable: {type(acct_exc).__name__}"
-            sigma_noise = None
+            sigma_noise = getattr(opt_dp, "noise_multiplier", None)
+            if sigma_noise is not None:
+                sigma_noise = float(sigma_noise)
         except ImportError as exc:
             # Opacus not installed in this environment: explicit clip + calibrated
             # Gaussian noise on the averaged gradient. The accounting is therefore an

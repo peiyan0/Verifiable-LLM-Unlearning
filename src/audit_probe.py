@@ -42,7 +42,7 @@ def sequence_logprob(model, tokenizer, question: str, answer: str, max_len: int 
         mask = lab != -100
         if int(mask.sum()) == 0:
             return 0.0
-        return float(tok_lp[mask].sum().item())
+        return float(tok_lp[mask].mean().item())
 
 
 def mia_scores_to_arrays(score_pairs):

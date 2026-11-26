@@ -255,11 +255,11 @@ def main():
     dp2u_audit = audit_and_write("dp2u_audit.json", model, tok, forget, holdout, cfg,
                                  {**run_meta, "role": "post_dp2u", "dp2u_record": dp_rec})
 
-    # ---- Utility (PR3): EM ratio of post-DP2U model vs the fine-tuned reference.
-    em_un = utility_metrics.exact_match(model, tok, retain, limit=20)
+    # ---- Utility (PR3): token-F1 ratio of post-DP2U model vs the fine-tuned reference.
+    em_un = utility_metrics.token_f1(model, tok, retain, limit=20)
     un_ce = utility_metrics.answer_ce(model, tok, retain, limit=50)
     reset_to_ft(model)
-    em_ref = utility_metrics.exact_match(model, tok, retain, limit=20)
+    em_ref = utility_metrics.token_f1(model, tok, retain, limit=20)
     ref_ce = utility_metrics.answer_ce(model, tok, retain, limit=50)
     util = {
         "generated_by": "scripts/run_pilot_audit.py",
